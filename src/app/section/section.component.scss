@@ -1,7 +1,14 @@
 .title {
   width: 100%;
   height: 80vh;
-  background-color: tomato;
-  color: white;
+  color: black;
   font-size: 30px;
+}
+
+.display {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
