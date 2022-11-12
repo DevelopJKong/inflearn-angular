@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-section',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent implements OnInit {
+  present = 0;
   constructor() {}
+
+  startTime($event: number) {
+    this.present = $event;
+  }
 
   ngOnInit(): void {}
 }

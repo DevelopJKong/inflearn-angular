@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-buttons',
@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
   count = 0;
+
+  @Output() clickEvent = new EventEmitter<number>();
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  start($event: MouseEvent) {
-    this.count++;
+  start() {
+    this.clickEvent.emit(10);
   }
 }
